@@ -5,6 +5,7 @@ class Conta:
         self.__titular = titular
         self.__saldo = saldo
         self.__limite = limite
+        self.__condigo_banco = '001'
 
     def extrato(self):
         print(f'O Titular {self.__titular} tem um Saldo de {self.__saldo}')
@@ -46,6 +47,14 @@ class Conta:
     def limite(self, limite):
         self.__limite = limite
 
+    # Métodos da classe
+    @staticmethod
+    def codigo_banco():
+        return '001'
+
+    def codigos_bancos():
+        return {'BB': '001', 'Caixa': '104', 'Bradesco': '237'}
+
 
 conta = Conta(123, 'Aline', 55, 1000)
 conta2 = Conta(345, 'Gui', 100, 1000)
@@ -72,3 +81,7 @@ print(f'Titular: {conta.titular} | Saldo: {conta.saldo} | Limite: {conta.limite}
 print()
 print('Métodos privados:')
 conta.saca(2500)
+
+print()
+print('Métodos de classe:')
+print(Conta.codigos_bancos())
