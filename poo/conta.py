@@ -21,8 +21,19 @@ class Conta:
         destino.deposita(valor)
         print(f'Foi transferido um valor de R${valor} do titular {self.__titular} para {destino.__titular}')
 
-    def inadimplemente(self):
-        pass
+    # getters e setters
+    def get_saldo(self):
+        return self.__saldo
+
+    def get_titular(self):
+        return self.__titular
+
+    def get_limite(self):
+        return self.__limite
+
+    def set_limite(self, limite):
+        self.__limite = limite
+
 
 conta = Conta(123, 'Aline', 55, 1000)
 conta2 = Conta(345, 'Gui', 100, 1000)
