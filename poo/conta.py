@@ -22,10 +22,12 @@ class Conta:
         print(f'Foi transferido um valor de R${valor} do titular {self.__titular} para {destino.__titular}')
 
     # getters e setters
-    def get_saldo(self):
+    @property
+    def saldo(self):
         return self.__saldo
 
-    def get_titular(self):
+    @property
+    def titular(self):
         return self.__titular
 
     @property
@@ -52,3 +54,9 @@ conta2.extrato()
 
 print()
 conta.transfere(10, conta2)
+
+print()
+print('Utilizando Getters e Setters:')
+print(f'Titular: {conta.titular} | Saldo: {conta.saldo} | Limite: {conta.limite}')
+conta.limite = 2000
+print(f'Titular: {conta.titular} | Saldo: {conta.saldo} | Limite: {conta.limite}')
