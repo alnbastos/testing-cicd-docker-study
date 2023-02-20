@@ -12,8 +12,16 @@ class Conta:
     def deposita(self, valor):
         self.__saldo += valor
 
+    def __pode_sacar(self, valor_a_sacar):
+        valor_disponivel_a_sacar = self.__saldo + self.__limite
+        return valor_a_sacar <= valor_disponivel_a_sacar
+
     def saca(self, valor):
-        self.__saldo -= valor
+        if self.__pode_sacar(valor):
+            self.__saldo -= valor
+            print('Saque efetuado.')
+        else:
+            print(f'O valor {valor} passou o limite de saque.')
 
     # encapsulamento
     def transfere(self, valor, destino):
@@ -60,3 +68,7 @@ print('Utilizando Getters e Setters:')
 print(f'Titular: {conta.titular} | Saldo: {conta.saldo} | Limite: {conta.limite}')
 conta.limite = 2000
 print(f'Titular: {conta.titular} | Saldo: {conta.saldo} | Limite: {conta.limite}')
+
+print()
+print('Métodos privados:')
+conta.saca(2500)
