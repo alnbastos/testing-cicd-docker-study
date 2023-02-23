@@ -22,22 +22,20 @@ class Programa:
 
 class Filme(Programa):
     def __init__(self, nome, ano, duracao):
-        self._nome = nome.title()
-        self.ano = ano
+        super().__init__(nome, ano)
         self.duracao = duracao
-        self._likes = 0
 
 
 class Serie(Programa):
     def __init__(self, nome, ano, temporadas):
-        self._nome = nome.title()
-        self.ano = ano
+        super().__init__(nome, ano)
         self.temporadas = temporadas
-        self._likes = 0
 
 
 vingadores = Filme('vingadores - guerra infinita', 2018, 160)
-print(vingadores.nome)
+vingadores.dar_likes()
+print(f'{vingadores.nome} - {vingadores.duracao}: {vingadores.likes}')
 
 atlanta = Serie('atlanta', 2018, 2)
-print(f'Nome: {atlanta.nome} | Ano: {atlanta.ano}')
+atlanta.dar_likes(), atlanta.dar_likes()
+print(f'{atlanta.nome} - {atlanta.temporadas}: {atlanta.likes}')
