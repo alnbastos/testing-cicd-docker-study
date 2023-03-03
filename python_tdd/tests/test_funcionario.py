@@ -14,3 +14,15 @@ class TestFuncionario:
         # THEN (Desfecho)
         assert idade_resultado == idade_esperada
 
+    def test_quando_sobrenome_recebe_Aline_Bastos_deve_retornar_apenas_Bastos(self):
+        # GIVEN (Contexto)
+        nome_entrada = ' Aline Bastos'
+        sobrenome_esperado = 'Bastos'
+        aline = Funcionario(nome_entrada, '13/07/1998', 1_000)
+
+        # WHEN (Ação)
+        sobrenome_resultado = aline.sobrenome()
+
+        # THEN (Desfecho)
+        assert sobrenome_resultado == sobrenome_esperado
+
