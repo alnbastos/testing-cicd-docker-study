@@ -1,0 +1,1 @@
+# É necessário criar este arquivo para indicar que a pasta tests é um módulo
