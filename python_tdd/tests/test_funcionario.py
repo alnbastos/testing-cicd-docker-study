@@ -41,3 +41,18 @@ class TestFuncionario:
 
         # THEN (Desfecho)
         assert salario_resultado == salario_esperado
+
+    def test_quando_calcular_bonus_recebe_1000_deve_retornar_100(self):
+        # GIVEN (Contexto)
+        salario_entrada = 1_000
+        salario_esperado = 100
+
+        funcionario_teste = Funcionario('Teste', '13/07/1998', salario_entrada)
+
+        # WHEN (Ação)
+        salario_resultado = funcionario_teste.calcular_bonus()
+
+        # THEN (Desfecho)
+        assert salario_resultado == salario_esperado
+    
+    

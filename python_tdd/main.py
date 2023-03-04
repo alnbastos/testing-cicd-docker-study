@@ -1,10 +1,15 @@
 from funcionario import Funcionario
 
-# aline = Funcionario('Aline', '03/12/1998', 1_000)
-# print(aline.idade())
-
 def teste_idade():
     funcionario_teste = Funcionario('Teste', '03/12/1998', 1_111)
     print(f'Teste = {funcionario_teste.idade()}')
 
-teste_idade()
+
+def teste_calcular_bonus():
+    ana = Funcionario('Ana', '12/03/1997', 100_000)
+    print(ana.calcular_bonus())
+
+
+if __name__ == '__main__':
+    teste_idade()
+    teste_calcular_bonus()
