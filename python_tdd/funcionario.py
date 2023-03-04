@@ -31,9 +31,12 @@ class Funcionario:
             valor = 0
         return valor
     
-    def decrescimo_salario(self):
+    def _eh_socio(self):
         sobrenomes = ['Bragança', 'Windsor', 'Bourbon', 'Yamato', 'Al Saud', 'Khan', 'Tudor', 'Ptolomev']
-        if self._salario >= 100_000 and self.sobrenome() in sobrenomes:
+        return self._salario >= 100_000 and self.sobrenome() in sobrenomes
+
+    def decrescimo_salario(self):
+        if self._eh_socio():
             decrescimo = self._salario * 0.1 # 10% retirado
             self._salario -= decrescimo
     
