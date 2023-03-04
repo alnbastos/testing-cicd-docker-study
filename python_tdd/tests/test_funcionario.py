@@ -1,5 +1,6 @@
 from funcionario import Funcionario
 import pytest
+from pytest import mark
 
 # O nome do método deve sempre começar com test_, seguido com a descrição verbosa
 class TestFuncionario:
@@ -43,6 +44,7 @@ class TestFuncionario:
         # THEN (Desfecho)
         assert salario_resultado == salario_esperado
 
+    @mark.calcular_bonus
     def test_quando_calcular_bonus_recebe_1000_deve_retornar_100(self):
         # GIVEN (Contexto)
         salario_entrada = 1_000
@@ -56,6 +58,7 @@ class TestFuncionario:
         # THEN (Desfecho)
         assert salario_resultado == salario_esperado
     
+    @mark.calcular_bonus
     def test_quando_calcular_bonus_recebe_1000000_deve_retornar_exception(self):
         with pytest.raises(Exception):
             # GIVEN (Contexto)
