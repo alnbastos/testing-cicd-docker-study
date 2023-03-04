@@ -26,3 +26,18 @@ class TestFuncionario:
         # THEN (Desfecho)
         assert sobrenome_resultado == sobrenome_esperado
 
+    def test_quando_decrescimo_salario_recebe_100000_deve_retornar_90000(self):
+        # GIVEN (Contexto)
+        salario_entrada = 100_000
+        nome_entrada = 'Paulo Bragança'
+        
+        salario_esperado = 90_000
+
+        funcionario_teste = Funcionario(nome_entrada, '13/07/1998', salario_entrada)
+
+        # WHEN (Ação)
+        funcionario_teste.decrescimo_salario()
+        salario_resultado = funcionario_teste.salario
+
+        # THEN (Desfecho)
+        assert salario_resultado == salario_esperado
