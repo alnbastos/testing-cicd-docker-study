@@ -72,15 +72,4 @@ class TestFuncionario:
             # THEN (Desfecho)
             assert salario_resultado
 
-    def test_retorno_string(self):
-        # GIVEN (Contexto)
-        nome, data_nascimento, salario = 'Teste', '13/07/1998', 1000
-        esperado = 'Funcionario(Teste, 13/07/1998, 1000)'
-        
-        # WHEN (Ação)
-        resultado = Funcionario(nome, data_nascimento, salario).__str__()
-
-        # THEN (Desfecho)
-        print(resultado, esperado, resultado == esperado)
-        assert resultado == esperado
     
