@@ -1,4 +1,4 @@
-from funcionario import Funcionario
+from codigo.funcionario import Funcionario
 import pytest
 from pytest import mark
 

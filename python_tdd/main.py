@@ -1,4 +1,4 @@
-from funcionario import Funcionario
+from codigo.funcionario import Funcionario
 
 def teste_idade():
     funcionario_teste = Funcionario('Teste', '03/12/1998', 1_111)

@@ -1,0 +1,12 @@
+[run]
+
+# adicionando caminho para utilizar apenas o comando pytest --cov
+source = codigo
+
+[report]
+exclude_lines =
+    def __str__
+
+[html]
+directory = coverage_relatorio_html
+# pytest --cov=codigo tests\ --cov-report html
