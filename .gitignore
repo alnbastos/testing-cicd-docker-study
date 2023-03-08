@@ -1,6 +1,4 @@
-poo/__pycache__
-python_tdd/__pycache__
-python_tdd/tests/__pycache__
-python_tdd/tests/.coverage
+*/__pycache__
 python_tdd/.coverage
+python_tdd/venv_py_tdd
 venv
