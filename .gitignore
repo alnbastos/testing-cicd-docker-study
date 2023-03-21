@@ -1,4 +1,5 @@
 */__pycache__
 python_tdd/.coverage
-python_tdd/venv_py_tdd
-venv
+poo/venv*
+python_tdd/venv*
+django_tdd/venv*
