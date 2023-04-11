@@ -1,6 +1,7 @@
 from django.test import LiveServerTestCase
 from webdriver_manager.firefox import GeckoDriverManager 
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 class AnimaisTestCase(LiveServerTestCase):
     def setUp(self):
@@ -10,9 +11,24 @@ class AnimaisTestCase(LiveServerTestCase):
     def tearDown(self):
         self.driver.quit()
 
-    def test_abre_janela_do_browser(self):
-        self.driver.get(self.live_server_url)
+    def test_buscando_um_novo_animal(self):
+        """ Teste se um usuário encontra um animal pesquisando. """
+        
+        # Vini, deseja encontrar um novo animal,
+        # para adotar.
 
-    def test_falho_de_proposito(self):
-        """teste de exemplo de erro"""
-        self.fail('Teste falhou')
+        # Ele encontra o Busca Animal e decide usar o site,
+        home_page = self.driver.get(self.live_server_url + '/')
+        # porque ele vê no menu do site escrito "busca animal".
+        brand_element = self.driver.find_element(By.CSS_SELECTOR, '.navbar')
+        self.assertEqual('Busca Animal', brand_element.text)
+        
+        # Ele vê um campo para pesquisar animais pelo nome.
+
+        # Ele pesquisa por "Leão" e clica no botão pesquisar.
+
+        # O site exibe 4 características do animal pesquisado.
+
+        # Ele desiste de adotar um animal.
+        
+        pass
