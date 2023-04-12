@@ -30,10 +30,11 @@ class AnimaisTestCase(LiveServerTestCase):
 
         # Ele pesquisa por "Leão" e clica no botão pesquisar.
         busca_animal_input.send_keys('leão')
-        time.sleep(2)
         self.driver.find_element(By.CSS_SELECTOR, 'form button').click()
 
         # O site exibe 4 características do animal pesquisado.
+        caracteristicas = self.driver.find_elements(By.CSS_SELECTOR, '.result-description')
+        self.assertGreater(len(caracteristicas), 3)
 
         # Ele desiste de adotar um animal.
 
