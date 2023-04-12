@@ -2,6 +2,7 @@ from django.test import LiveServerTestCase
 from webdriver_manager.firefox import GeckoDriverManager 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import time
 
 class AnimaisTestCase(LiveServerTestCase):
     def setUp(self):
@@ -28,6 +29,9 @@ class AnimaisTestCase(LiveServerTestCase):
         self.assertEqual(busca_animal_input.get_attribute('placeholder'), 'Exemplo: leão')
 
         # Ele pesquisa por "Leão" e clica no botão pesquisar.
+        busca_animal_input.send_keys('leão')
+        time.sleep(2)
+        self.driver.find_element(By.CSS_SELECTOR, 'form button').click()
 
         # O site exibe 4 características do animal pesquisado.
 
