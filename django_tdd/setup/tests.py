@@ -2,12 +2,13 @@ from django.test import LiveServerTestCase
 from webdriver_manager.firefox import GeckoDriverManager 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time
 
 class AnimaisTestCase(LiveServerTestCase):
     def setUp(self):
         # self.driver = webdriver.Firefox(executable_path=GeckoDriverManager(cache_valid_range=10).install())
-        self.driver = webdriver.Firefox(executable_path='driver/geckodriver.exe')
+        options = webdriver.FirefoxOptions()
+        options.add_argument("--headless")
+        self.driver = webdriver.Firefox(executable_path='driver/geckodriver.exe', options=options)
 
     def tearDown(self):
         self.driver.quit()
