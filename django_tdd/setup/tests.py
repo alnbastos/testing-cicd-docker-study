@@ -2,6 +2,7 @@ from django.test import LiveServerTestCase
 from webdriver_manager.firefox import GeckoDriverManager 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from animais.models import Animal
 
 class AnimaisTestCase(LiveServerTestCase):
     def setUp(self):
@@ -9,6 +10,12 @@ class AnimaisTestCase(LiveServerTestCase):
         options = webdriver.FirefoxOptions()
         options.add_argument("--headless")
         self.driver = webdriver.Firefox(executable_path='driver/geckodriver.exe', options=options)
+        self.animal = Animal.objects.create(
+            nome = 'Leão',
+            predador = 'Sim',
+            venenoso = 'Não',
+            domestico = 'Não',
+        )
 
     def tearDown(self):
         self.driver.quit()
