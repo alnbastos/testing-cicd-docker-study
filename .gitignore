@@ -1,4 +1,4 @@
-*/__pycache__
+*__pycache__*
+*venv*
 python_tdd/.coverage
-python_tdd/venv_py_tdd
-venv
+*/geckodriver.log

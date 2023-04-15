@@ -4,7 +4,7 @@ Este repositório está direcionado a minhas metas de estudo em 2023. Abaixo, li
 
 - [x] Python Orientado a Objetos
 - [x] Python e TDD
-- [ ] Django e TDD
+- [x] Django e TDD
 - [ ] Entrega Contínua
 - [ ] Integração Contínua
 - [ ] Jenkins
