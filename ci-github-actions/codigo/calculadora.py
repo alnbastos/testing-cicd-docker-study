@@ -11,20 +11,14 @@ class Calculator:
     def sum(self, x:int, y:int) -> int or float:
         if self.validation_type_number(x, y):
             return x + y
-        else:
-            return None
 
     def subtraction(self, x, y):
         if self.validation_type_number(x, y):
             return x - y
-        else:
-            return None
 
     def multiplication(self, x, y):
         if self.validation_type_number(x, y):
             return x * y
-        else:
-            return None
 
     def division(self, x, y):
         if self.validation_type_number(x, y):
@@ -32,6 +26,4 @@ class Calculator:
                 return round(x / y, 2)
             except ZeroDivisionError:
                 return None
-        else:
-            return None
 
