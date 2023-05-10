@@ -43,7 +43,7 @@ class TestCalculator:
     def test_divisao_por_zero(self):
         numero_a = 1
         numero_b = 0
-        resultado_esperado = None
+        resultado_esperado = 0
 
         resultado = Calculator().division(numero_a, numero_b)
         
