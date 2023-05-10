@@ -1,6 +1,6 @@
 # Estudo - Metas 2023
 
-Este repositório está direcionado as minhas metas de estudo em 2023. Abaixo, listo os assuntos que serão abordados neste repositório:
+Este repositório está direcionado as minhas metas de estudo em 2023. Abaixo, listo os assuntos que serão abordados:
 
 - [x] Python Orientado a Objetos
 - [x] Python e TDD
