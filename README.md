@@ -7,7 +7,7 @@ Este repositório está direcionado as minhas metas de estudo em 2023. Abaixo, l
 - [x] Django e TDD
 - [x] Integração Contínua: mais qualidade e menos risco no desenvolvimento
 - [x] Entrega Contínua: confiabilidade e qualidade na implantação de software
-- [ ] Integração Contínua: testes automatizados e pipeline no Github Actions
+- [x] Integração Contínua: testes automatizados e pipeline no Github Actions
 - [ ] Docker: criando e gerenciando containers
 - [ ] Integração Contínua: Pipeline Docker no Github Actions
 - [ ] Jenkins: integração contínua
