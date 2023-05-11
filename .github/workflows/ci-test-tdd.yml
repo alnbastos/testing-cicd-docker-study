@@ -13,28 +13,25 @@ permissions:
   contents: read
 
 jobs:
-  config:
-    runs-on: ubuntu-latest
+  tests:
+    runs-on: ${{ matrix.OS }}
+    strategy:
+      matrix:
+        python_version: ["3.8", "3.9", ">=3.10"]
+        OS: ['ubuntu-latest', 'windows-11']
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python 3.8
+    - name: Set up Python ${{ matrix.python_version }}
       uses: actions/setup-python@v3
       with:
-        python-version: "3.8"
+        python-version: ${{ matrix.python_version }}
         
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r ci-github-actions/requirements.txt
   
-  tests:  
-    needs: config
-    runs-on: ubuntu-latest
-    steps:
-
-    - uses: actions/checkout@v3
-    
     - name: Test with pytest
       run: |
         cd ci-github-actions
