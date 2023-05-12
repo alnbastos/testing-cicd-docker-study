@@ -1,0 +1,38 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Python application
+
+on:
+  push:
+    branches: [ "ci-github-actions" ]
+  pull_request:
+    branches: [ "ci-github-actions" ]
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ${{ matrix.OS }}
+    strategy:
+      matrix:
+        python_version: ["3.8", "3.9", ">=3.10"]
+        OS: ['ubuntu-latest', 'windows-11']
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python_version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python_version }}
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r ci-github-actions/requirements.txt
+  
+    - name: Test with pytest
+      run: |
+        cd ci-github-actions
+        pytest
