@@ -9,4 +9,4 @@
 - Instalando dependências
 `pip install -r requirements.txt`
 - Iniciando servidor
-`uvicorn main:app --reload`
+`uvicorn app.main:app --reload`
