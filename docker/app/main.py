@@ -22,3 +22,20 @@ def create_animal(animal: Animals):
         photo=dict_animal["photo"]
     )
 
+
+@app.get("/read/animal/")
+def read_animal():
+    list_animals = list()
+    for data in database.read_data():
+        list_animals.append({
+            "id": data[0],
+            "name": data[1],
+            "species": data[2],
+            "average_weight_kg": data[3],
+            "country_origin": data[4],
+            "average_age": data[5],
+            "photo": data[6]
+        })
+
+    return list_animals
+

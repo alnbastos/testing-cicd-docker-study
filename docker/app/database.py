@@ -41,11 +41,7 @@ class Postgres:
     def read_data(self):
         sql = "SELECT * FROM animals"
         self.cursor.execute(sql)
-        result = self.cursor.fetchall()
-
-        self.close_connection()
-
-        return result, [column[0] for column in self.cursor.description]
+        return self.cursor.fetchall()
 
     def close_connection(self):
         self.connection.close()
