@@ -3,3 +3,4 @@
 python_tdd/.coverage
 */geckodriver.log
 django_tdd/db.sqlite3
+docker/.env
