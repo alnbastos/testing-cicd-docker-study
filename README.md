@@ -8,7 +8,7 @@ Este repositório está direcionado as minhas metas de estudo em 2023. Abaixo, l
 - [x] Integração Contínua: mais qualidade e menos risco no desenvolvimento
 - [x] Entrega Contínua: confiabilidade e qualidade na implantação de software
 - [x] Integração Contínua: testes automatizados e pipeline no Github Actions
-- [ ] Docker: criando e gerenciando containers
+- [x] Docker: criando e gerenciando containers
 - [ ] Integração Contínua: Pipeline Docker no Github Actions
 - [ ] Jenkins: integração contínua
 - [ ] Integração Contínua: automatizando a entrega no Kubernetes
