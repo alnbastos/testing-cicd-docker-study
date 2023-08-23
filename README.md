@@ -10,7 +10,7 @@ Este repositório está direcionado as minhas metas de estudo em 2023. Abaixo, l
 - [x] Integração Contínua: testes automatizados e pipeline no Github Actions
 - [x] Docker: criando e gerenciando containers
 - [ ] Integração Contínua: Pipeline Docker no Github Actions
-- [ ] Jenkins: integração contínua
+- [x] Jenkins: integração contínua
 - [ ] Integração Contínua: automatizando a entrega no Kubernetes
 - [ ] Jenkins e Docker: Pipeline de entrega continua
 - [ ] Python e PEP8
